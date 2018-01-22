@@ -6,6 +6,7 @@ const cssProps = [
   ['textDecoration', /none/i],
 ];
 SyntaxHighlighter.config.space = '&#32;';
+SyntaxHighlighter.defaults['auto-links'] = false;
 
 const languageSelectElement = document.getElementById('language');
 const themeSelectElement = document.getElementById('theme');
