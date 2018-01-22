@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="referrer" content="no-referrer">
+  <link rel="stylesheet" href="css/shCore.css">
+  <link rel="stylesheet" id="css-sh-core">
+  <link rel="stylesheet" id="css-sh-theme">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Highlighting For Report</title>
+</head>
+
+<body>
+  <form>
+    <div>
+      <label>
+        Language:
+        <select id="language">
+          <option data-brush="applescript" data-file="AppleScript">AppleScript</option>
+          <option data-brush="arduino" data-file="Arduino">Arduino</option>
+          <option data-brush="as3" data-file="AS3">ActionScript3</option>
+          <option data-brush="bash" data-file="Bash">Shell Script / Bash</option>
+          <option data-brush="cf" data-file="ColdFusion">ColdFusion</option>
+          <option data-brush="cpp" data-file="Cpp" selected>C / C++</option>
+          <option data-brush="csharp" data-file="CSharp">C#</option>
+          <option data-brush="css" data-file="Css">CSS</option>
+          <option data-brush="delphi" data-file="Delphi">Pascal / Delphi</option>
+          <option data-brush="diff" data-file="Diff">Diff</option>
+          <option data-brush="erl" data-file="Erlang">Erlang</option>
+          <option data-brush="groovy" data-file="Groovy">Groovy</option>
+          <option data-brush="haxe" data-file="Haxe">Haxe</option>
+          <option data-brush="java" data-file="Java">Java</option>
+          <option data-brush="jfx" data-file="JavaFX">Java FX</option>
+          <option data-brush="js" data-file="JScript">JavaScript</option>
+          <option data-brush="pl" data-file="Perl">Perl</option>
+          <option data-brush="php" data-file="Php">PHP</option>
+          <option data-brush="text" data-file="Plain">Plain Text</option>
+          <option data-brush="ps" data-file="PowerShell">PowerShell</option>
+          <option data-brush="py" data-file="Python">Python</option>
+          <option data-brush="rb" data-file="Ruby">Ruby</option>
+          <option data-brush="sass" data-file="Sass">Sass (SASS / SCSS)</option>
+          <option data-brush="scala" data-file="Scala">Scala</option>
+          <option data-brush="sql" data-file="Sql">SQL</option>
+          <option data-brush="tap" data-file="TAP">TAP</option>
+          <option data-brush="ts" data-file="TypeScript">TypeScript</option>
+          <option data-brush="vb" data-file="VB">Visual Basic (.NET)</option>
+          <option data-brush="xml" data-file="Xml">HTML / XML</option>
+        </select>
+      </label>
+      <label>
+        Theme:
+        <select id="theme">
+          <option data-file="Black">Black</option>
+          <option data-file="Default" selected>Default</option>
+          <option data-file="Django">Django</option>
+          <option data-file="Eclipse">Eclipse</option>
+          <option data-file="Emacs">Emacs</option>
+          <option data-file="FadeToGrey">FadeToGrey</option>
+          <option data-file="MDUltra">MDUltra</option>
+          <option data-file="Midnight">Midnight</option>
+          <option data-file="Rai">Rai</option>
+          <option data-file="RDark">RDark</option>
+        </select>
+      </label>
+      <label>
+        Line numbers:
+        <select id="line-numbers">
+          <option value="none">None</option>
+          <option value="space" selected>Space padded</option>
+          <option value="zero">Zero padded</option>
+        </select>
+      </label>
+      <label>
+        <input id="auto-highlight" type="checkbox" checked>
+        Auto highlight
+      </label>
+      <button id="highlight" type="button">
+        Highlight
+      </button>
+    </div>
+    <div>
+      <textarea id="code">// put your code here&#10;</textarea>
+    </div>
+  </form>
+
+  <button id="copy-html" type="button">
+    Copy HTML
+  </button>
+  <div id="copy-target">
+    <div id="highlighted-code"></div>
+  </div>
+
+  <div id="notice">
+    This software makes use of <a href="https://github.com/syntaxhighlighter/syntaxhighlighter" target="_blank" rel="noopener noreferrer">SyntaxHighlighter</a> 3.0.90.<br>
+    See <a href="https://github.com/SegaraRai/HighlightingForReport/blob/master/Thirdparty.md" target="_blank" rel="noopener noreferrer">Thirdparty.md</a> for details.
+  </div>
+
+  <div id="highlighter-temp"></div>
+
+  <script src="js/xregexp-all.js"></script>
+  <script src="js/shCore.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
