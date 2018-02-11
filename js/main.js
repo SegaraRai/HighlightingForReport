@@ -109,6 +109,9 @@ function highlight() {
   }
   prevData = data;
 
+  // update placeholder of filename input
+  filenameInputElement.placeholder = `${filenameInputElement.dataset.placeholderBase}${languageOptionElement.dataset.extension}`;
+
   // highlight
   const preElement = document.createElement('pre');
   preElement.className = `brush: ${languageOptionElement.dataset.brush}`;
