@@ -12,12 +12,14 @@ const languageSelectElement = document.getElementById('language');
 const themeSelectElement = document.getElementById('theme');
 const lineNumbersSelectElement = document.getElementById('line-numbers');
 const autoHightlightCheckboxElement = document.getElementById('auto-highlight');
+const filenameInputElement = document.getElementById('filename');
 const codeTextareaElement = document.getElementById('code');
 const highlightButtonElement = document.getElementById('highlight');
 const copyHtmlButtonElement = document.getElementById('copy-html');
 const copyTargetDivElement = document.getElementById('copy-target');
 const highlightedCodeDivElement = document.getElementById('highlighted-code');
 const highlighterTempDivElement = document.getElementById('highlighter-temp');
+const codeFilenameDivElement = document.getElementById('code-filename');
 
 const loadedLanguageScriptSet = new Set();
 let prevTheme, prevData;
@@ -159,11 +161,19 @@ function highlight() {
 }
 
 
+function updateFilename() {
+  codeFilenameDivElement.innerText = filenameInputElement.value.trim();
+}
+
+
 for (const eventName of ['change', 'keyup']) {
   codeTextareaElement.addEventListener(eventName, event => {
     if (autoHightlightCheckboxElement.checked) {
       highlight();
     }
+  });
+  filenameInputElement.addEventListener(eventName, event => {
+    updateFilename();
   });
 }
 
