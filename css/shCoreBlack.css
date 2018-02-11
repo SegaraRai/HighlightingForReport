@@ -1,7 +1,9 @@
   .syntaxhighlighter .plain, .syntaxhighlighter .plain a {
     color: #000 !important; }
   .syntaxhighlighter .comments, .syntaxhighlighter .comments a {
-    color: #444 !important; }
+    /* font-style: oblique !important; */
+    font-weight: 200;
+    color: #555 !important; }
   .syntaxhighlighter .string, .syntaxhighlighter .string a {
     color: #000 !important; }
   .syntaxhighlighter .keyword {
