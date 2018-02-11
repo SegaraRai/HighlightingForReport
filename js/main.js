@@ -77,10 +77,10 @@ function highlight() {
   // load brush (if not loaded yet)
   const languageScriptUrl = `js/shBrush${languageOptionElement.dataset.file}.js`;
   if (!loadedLanguageScriptSet.has(languageScriptUrl)) {
+    loadedLanguageScriptSet.add(languageScriptUrl);
     // clear cache of SyntaxHighlighter
     SyntaxHighlighter.vars.discoveredBrushes = null;
     loadScript(languageScriptUrl, () => {
-      loadedLanguageScriptSet.add(languageScriptUrl);
       highlight();
     });
     return;
